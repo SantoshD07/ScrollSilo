@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "scrollsilo"
+version = "0.1.0"
+description = "Turn saved Instagram reels into searchable knowledge, entirely on your own machine."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["instagram", "reels", "whisper", "ollama", "knowledge-base", "obsidian", "local-llm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Video",
+]
+dependencies = [
+    "ollama",
+    "pydantic>=2",
+    # Apple-silicon only; keeps the package installable (and testable) on Linux CI.
+    "mlx-whisper; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+scrollsilo = "scrollsilo.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/scrollsilo"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
