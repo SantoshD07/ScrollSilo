@@ -1,0 +1,20 @@
+{
+  "source": "https://www.instagram.com/reel/EXAMPLE12345/",
+  "creator": "Example Creator",
+  "handle": "example_creator",
+  "posted": "2026-09-19",
+  "caption": "3 ways to speed up your Python code #python #performance #coding",
+  "hashtags": ["python", "performance", "coding"],
+  "has_speech": true,
+  "language": "en",
+  "transcript": "Here are three ways to make your Python code faster. First, use built-in functions and list comprehensions instead of manual loops. Second, profile before you optimize so you fix the real bottleneck. Third, cache expensive calls with functools lru_cache.",
+  "summary": "Three practical tips for speeding up Python code: prefer built-ins and comprehensions, profile before optimizing, and cache repeated expensive calls.",
+  "takeaways": [
+    "Built-in functions and list comprehensions are usually faster than hand-written loops.",
+    "Profile first so you optimize the actual bottleneck.",
+    "functools.lru_cache avoids recomputing expensive calls."
+  ],
+  "tags": ["python", "performance", "profiling", "caching"],
+  "content_type": "tutorial",
+  "transcript_en": "Here are three ways to make your Python code faster. First, use built-in functions and list comprehensions instead of manual loops. Second, profile before you optimize so you fix the real bottleneck. Third, cache expensive calls with functools lru_cache."
+}
